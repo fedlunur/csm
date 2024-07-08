@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-from .models import Department, Region, Zone, Wereda
+
 from structure.models import *
 
 

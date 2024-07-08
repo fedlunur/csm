@@ -42,9 +42,9 @@ INSTALLED_APPS = [
     #'rest_framework_simplejwt.token_blacklist',
     'corsheaders',
     'structure',
-      #'appointment',
-      #'department',
-      #'complain',
+      'appointment',
+      'department',
+      'complain',
    
  
 ]

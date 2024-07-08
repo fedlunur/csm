@@ -1,7 +1,4 @@
 from django.db import models
-from .models import Zone, Wereda, Department, Employee, Service
-
-
 from django.db import models
 from department.models import *
 
