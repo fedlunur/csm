@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from .views import *
 
 from structure.views import *;
 from appointment.views import *;
@@ -51,6 +52,7 @@ urlpatterns = [
     path('api/complain_feedbacks/<int:pk>/', ComplainFeedbackRetrieveUpdateDestroyView.as_view(), name='complain_feedback-detail'),
     path('api/files_attached/', FilesAttachedListCreateView.as_view(), name='files_attached-list-create'),
     path('api/files_attached/<int:pk>/', FilesAttachedRetrieveUpdateDestroyView.as_view(), name='files_attached-detail'),
+    
     # for departments 
     path('api/positions/', PositionListCreateView.as_view(), name='position-list-create'),
     path('api/positions/<int:pk>/', PositionRetrieveUpdateDestroyView.as_view(), name='position-detail'),
@@ -58,5 +60,9 @@ urlpatterns = [
     path('api/departments/<int:pk>/', DepartmentRetrieveUpdateDestroyView.as_view(), name='department-detail'),
     path('api/services/', ServiceListCreateView.as_view(), name='service-list-create'),
     path('api/services/<int:pk>/', ServiceRetrieveUpdateDestroyView.as_view(), name='service-detail'),
-   
+    
+    # for genertics 
+path('api/<str:model_name>/list', GenericListAPIView.as_view(), name='generic-list'),
 ]
+   
+
